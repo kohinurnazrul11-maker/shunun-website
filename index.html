@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="description" content="বাংলা ও ইংরেজি লেখা প্রাকৃতিক AI কণ্ঠে শুনুন।">
+  <title>শুনুন — আপনার ব্যক্তিগত পাঠক</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="শুনুন হোম">
+      <span class="brand-mark">শু</span>
+      <span>শুনুন<span class="brand-dot">.</span></span>
+    </a>
+    <span class="top-note"><span class="live-dot"></span> AI অডিও রিডার</span>
+  </header>
+
+  <main class="shell">
+    <section class="intro">
+      <div class="eyebrow">READ LESS. LISTEN MORE.</div>
+      <h1>লেখা দিন,<br><span>শুনে নিন।</span></h1>
+      <p>দীর্ঘ পোস্ট বা আর্টিকেল পড়তে হবে না। লেখাটি পেস্ট করুন, আরাম করে শুনুন।</p>
+    </section>
+
+    <section class="reader-card" aria-label="লেখা থেকে অডিও তৈরি">
+      <div class="card-heading">
+        <div>
+          <span class="step-label">01 / YOUR TEXT</span>
+          <h2>আপনার লেখাটি দিন</h2>
+        </div>
+        <span class="privacy-tag">🔒 লেখা সংরক্ষণ করা হয় না</span>
+      </div>
+
+      <label class="sr-only" for="sourceText">যে লেখাটি শুনতে চান</label>
+      <textarea id="sourceText" maxlength="12000" placeholder="ফেসবুক পোস্ট, আর্টিকেল বা যেকোনো লেখা এখানে পেস্ট করুন..."></textarea>
+      <div class="text-meta">
+        <span id="charCount">০ / ১২,০০০ অক্ষর</span>
+        <button id="clearBtn" class="text-button" type="button">মুছে ফেলুন</button>
+      </div>
+
+      <div class="settings">
+        <div class="setting">
+          <label for="language">ভাষা</label>
+          <select id="language">
+            <option value="bn">বাংলা</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+        <div class="setting">
+          <label for="voice">AI কণ্ঠ</label>
+          <select id="voice">
+            <option value="ara">Ara — কণ্ঠ ১</option>
+            <option value="eve">Eve — কণ্ঠ ২</option>
+            <option value="rex">Rex — কণ্ঠ ৩</option>
+            <option value="sal">Sal — কণ্ঠ ৪</option>
+            <option value="leo">Leo — কণ্ঠ ৫</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="generateBtn" class="primary-button" type="button">
+        <span class="button-icon">▶</span>
+        <span id="buttonText">পড়ে শোনান</span>
+        <span class="button-arrow">↗</span>
+      </button>
+      <p class="ai-disclosure">এই অডিও AI দ্বারা তৈরি; এটি কোনো মানুষের সরাসরি কণ্ঠ নয়।</p>
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </section>
+
+    <section id="playerCard" class="player-card hidden">
+      <div class="player-top">
+        <div class="sound-icon">♫</div>
+        <div class="player-title">
+          <span class="step-label">02 / NOW PLAYING</span>
+          <h2>আপনার অডিও তৈরি হয়েছে</h2>
+        </div>
+        <span class="ready-pill">প্রস্তুত</span>
+      </div>
+      <audio id="audioPlayer" controls></audio>
+      <div class="player-actions">
+        <button id="downloadBtn" class="secondary-button" type="button">↓ অডিও ডাউনলোড</button>
+        <button id="newBtn" class="text-button" type="button">নতুন লেখা</button>
+      </div>
+    </section>
+
+    <section class="how">
+      <div class="how-item"><span>01</span><div><b>কপি করুন</b><small>ফেসবুক বা ওয়েব থেকে লেখা কপি করুন</small></div></div>
+      <div class="how-item"><span>02</span><div><b>পেস্ট করুন</b><small>এখানে লেখাটি দিয়ে ভাষা ও কণ্ঠ বেছে নিন</small></div></div>
+      <div class="how-item"><span>03</span><div><b>শুনুন</b><small>অডিও চালান, চাইলে ডাউনলোড করুন</small></div></div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="footer-brand">শুনুন.</span>
+    <span>লেখাকে শুনুন, সময় বাঁচান।</span>
+    <span>AI-generated voice</span>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>
